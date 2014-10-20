@@ -1,0 +1,9 @@
+---
+resources:
+ - url: http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+   target: project/jenkins.war
+---
+resources:
+ - url: https://github.com/tveronezi/springchat/archive/master.zip
+   unzip: src/master
+   copy: src/springchat.zip

@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>apache-downloader-test</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <parent>
+    <groupId>buildnplay</groupId>
+    <artifactId>apache-downloader</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>buildnplay</groupId>
+      <artifactId>apache-downloader-plugin</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>buildnplay</groupId>
+        <artifactId>apache-downloader-plugin</artifactId>
+        <version>${project.version}</version>
+        <configuration>
+          <resources>
+            <apacheResource>
+              <link>tomee/tomee-1.7.1/apache-tomee-1.7.1-webprofile.tar.gz</link>
+            </apacheResource>
+            <apacheResource>
+              <link>commons/cli/binaries/commons-cli-1.2-bin.tar.gz</link>
+              <extractTo>${project.build.directory}/extracted-apache-resources</extractTo>
+            </apacheResource>
+            <apacheResource>
+              <link>commons/cli/source/commons-cli-1.2-src.zip</link>
+              <copyTo>${project.build.directory}/copied-apache-resources/commons-cli-src.zip</copyTo>
+              <extractTo>${project.build.directory}/extracted-apache-resources</extractTo>
+            </apacheResource>
+          </resources>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>download</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

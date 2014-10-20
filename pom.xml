@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>buildnplay</groupId>
+  <artifactId>apache-downloader</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>plugin</module>
+    <module>test</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <version.junit>2.3.7</version.junit>
+    <version.groovy>2.3.7</version.groovy>
+    <version.maven.api>3.0.5</version.maven.api>
+    <version.maven.annotations>3.3</version.maven.annotations>
+    <version.nekohtml>1.9.13</version.nekohtml>
+    <version.junit>4.11</version.junit>
+    <version.common.compress>1.8.1</version.common.compress>
+    <version.maven.plugin.plugin>3.2</version.maven.plugin.plugin>
+    <version.maven.compiler.plugin>3.1</version.maven.compiler.plugin>
+    <version.maven.surefire.plugin>2.17</version.maven.surefire.plugin>
+    <version.groovy.eclipse.compiler>2.8.0-01</version.groovy.eclipse.compiler>
+    <version.groovy.eclipse.batch>2.1.8-01</version.groovy.eclipse.batch>
+    <version.codenarc.maven.plugin>0.18-1</version.codenarc.maven.plugin>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.codehaus.groovy</groupId>
+        <artifactId>groovy-xml</artifactId>
+        <version>${version.groovy}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.groovy</groupId>
+        <artifactId>groovy-ant</artifactId>
+        <version>${version.groovy}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven</groupId>
+        <artifactId>maven-plugin-api</artifactId>
+        <version>${version.maven.api}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven.plugin-tools</groupId>
+        <artifactId>maven-plugin-annotations</artifactId>
+        <version>${version.maven.annotations}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.sourceforge.nekohtml</groupId>
+        <artifactId>nekohtml</artifactId>
+        <version>${version.nekohtml}</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${version.junit}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-compress</artifactId>
+        <version>${version.common.compress}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

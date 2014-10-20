@@ -1,0 +1,14 @@
+---
+resources:
+ - url: https://github.com/tveronezi/jchat/archive/master.zip
+   unzip: src/master
+   copy: src/jchat.zip
+ - apache: tomee/tomee-1.7.1/apache-tomee-1.7.1-plus.zip
+   copy: tomee.zip
+ - apache: maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
+   unzip: bin
+---
+resources:
+ - url: https://github.com/tveronezi/springchat/archive/master.zip
+   unzip: src/master
+   copy: src/springchat.zip
