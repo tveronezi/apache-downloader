@@ -3,7 +3,7 @@
 
   <groupId>buildnplay</groupId>
   <artifactId>apache-downloader</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -15,7 +15,7 @@
     <connection>scm:git:https://github.com/tveronezi/apache-downloader.git</connection>
     <developerConnection>scm:git:git@github.com:tveronezi/apache-downloader.git</developerConnection>
     <url>https://github.com/tveronezi/apache-downloader</url>
-    <tag>apache-downloader-0.0.2</tag>
+    <tag>apache-downloader-0.0.1</tag>
   </scm>
 
   <distributionManagement>
