@@ -21,6 +21,7 @@
   <distributionManagement>
     <repository>
       <id>bintray</id>
+      <name>tveronezi-maven-apache-downloader</name>
       <url>https://api.bintray.com/maven/tveronezi/maven/apache-downloader</url>
     </repository>
   </distributionManagement>

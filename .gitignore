@@ -1,3 +1,5 @@
 test/target/
 plugin/target/
 target/
+*.releaseBackup
+release.properties
